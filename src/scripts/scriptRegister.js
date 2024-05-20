@@ -45,6 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         usuarios.push(nuevoUsuario); // Agrega el nuevo usuario a la lista
         localStorage.setItem('usuarios', JSON.stringify(usuarios)); // Guarda la lista actualizada en localStorage
         alert('El usuario se registró correctamente'); // Alerta de éxito
-        window.location.href = "login.html"; // Redirige a la página de inicio de sesión
+        window.location.href = "index.html"; // Redirige a la página de inicio de sesión
     }
 });

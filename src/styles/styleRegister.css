@@ -19,7 +19,7 @@ html {
 /* Estilos para el cuerpo del documento */
 body {
     font-family: var(--fuente);
-    background-color: #fff; /* Color de fondo blanco */
+    background-color: #f0f2f5; /* Color de fondo blanco */
     display: flex;
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */

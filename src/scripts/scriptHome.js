@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.removeItem('nuevo-nombre'); // Eliminar el nombre de usuario del localStorage
         alert('Sesión cerrada correctamente');
         // Redirigir al usuario a la página de inicio de sesión
-        window.location.href = "login.html";
+        window.location.href = "index.html";
     }  
 
     // Obtener el nombre del usuario del localStorage

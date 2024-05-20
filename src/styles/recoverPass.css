@@ -1,0 +1,91 @@
+/* Estilos para recoverPass.html */
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    border: 5px solid #092546; /* Borde grueso azul */
+    background-color: #123b72;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.input-container label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-container input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.button-container {
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.user-info {
+    background-color: #e1e3ed;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.user-field {
+    margin-bottom: 10px;
+}
+
+.user-field label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-field span {
+    display: block;
+    font-size: 14px;
+    color: #555;
+}
+
+.btn-search, .btn-clear, .btn-back {
+    background-color: #8DA9C4; /* Fondo azul gris */
+    color: #fff; /* Texto blanco */
+    font-size: 14px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    border: none; /* Sin borde */
+    margin-top: 15px; /* Margen superior */
+    padding: 8px 12px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color .3s ease-in-out; /* Transición */
+}
+
+.btn-search:hover, .btn-clear:hover, .btn-back:hover {
+    cursor: pointer; /* Cursor puntero */
+    background-color: #0B2545; /* Fondo azul oscuro */
+}
