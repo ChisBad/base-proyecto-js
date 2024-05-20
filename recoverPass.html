@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="css/recoverPass.css"> <!-- Enlace al archivo de estilos CSS -->
+</head>
+
+<body>
+    <div class="container">
+        <h2>Recuperar Información del Usuario</h2>
+        <div class="input-container">
+            <label for="correo">Ingrese su correo electrónico:</label>
+            <input type="email" id="correo" placeholder="Correo electrónico">
+        </div>
+        <button onclick="buscarUsuario()">Buscar Usuario</button>
+        <div class="user-info">
+            <div class="user-field">
+                <label for="usuario">Usuario de Acceso:</label>
+                <span id="usuario"></span>
+            </div>
+            <div class="user-field">
+                <label for="nombre">Nombre del Usuario:</label>
+                <span id="nombre"></span>
+            </div>
+            <div class="user-field">
+                <label for="correoMostrar">Correo Electrónico:</label>
+                <span id="correoMostrar"></span>
+            </div>
+            <div class="user-field">
+                <label for="contraseña">Contraseña:</label>
+                <span id="contraseña"></span>
+            </div>
+        </div>
+        <button onclick="regresar()">Regresar a Login</button>
+    </div>
+
+    <script>
+        // Función para buscar el usuario por correo electrónico
+        function buscarUsuario() {
+            const correo = document.getElementById('correo').value; // Obtener el correo ingresado por el usuario
+            const usuarios = JSON.parse(localStorage.getItem('usuarios')) || []; // Obtener la lista de usuarios almacenados en localStorage
+            
+            // Buscar el usuario por correo electrónico
+            const usuarioEncontrado = usuarios.find(usuario => usuario.email === correo);
+            
+            // Verificar si se encontró el usuario
+            if (usuarioEncontrado) {
+                // Mostrar la información del usuario
+                document.getElementById('usuario').innerText = usuarioEncontrado.usuario;
+                document.getElementById('nombre').innerText = usuarioEncontrado.nombre;
+                document.getElementById('correoMostrar').innerText = usuarioEncontrado.email;
+                document.getElementById('contraseña').innerText = usuarioEncontrado.password;
+            } else {
+                alert('El correo electrónico ingresado no está registrado');
+            }
+        }
+
+        // Función para regresar al login.html
+        function regresar() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

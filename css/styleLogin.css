@@ -1,0 +1,147 @@
+/* Configuración de variables CSS */
+:root {
+    --azul: #134074;
+    --azulOscuro: #0B2545;
+    --azulGris: #8DA9C4;
+    --blanco: #fff;
+    --fuente: 'Quicksand', sans-serif;
+}
+
+/* Configuración del box-sizing */
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: var(--fuente);
+    background-color: #fff; /* Color de fondo blanco */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 100vh;
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos para el contenedor principal */
+.contenedor {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    flex-direction: row; /* Elementos en fila */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+/* Estilos para el cuadro que incluye la imagen y el formulario */
+.cuadro {
+    border: 5px solid var(--azul); /* Borde grueso azul */
+    padding: 20px; /* Espacio interno */
+    display: flex;
+    flex-direction: row; /* Elementos en fila */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrado vertical */
+    max-width: 980px; /* Ancho máximo */
+    background-color: var(--azulOscuro); /* Fondo azul oscuro */
+}
+
+/* Estilos para la imagen del formulario */
+.imagen-formulario img {
+    max-width: 250px; /* Tamaño máximo del logo */
+    margin-right: 20px; /* Espacio a la derecha */
+    border-radius: 50%; /* Borde redondeado */
+}
+
+/* Estilos para el formulario */
+.formulario {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding: 20px; /* Espacio interno */
+    background-color: #2040a873; /* Fondo azul translúcido */
+    max-width: 300px; /* Ancho máximo */
+}
+
+/* Estilos para los textos dentro del formulario */
+.texto-formulario h2, .input label, .password-olvidada a, .texto-formulario p {
+    color: var(--blanco); /* Texto blanco */
+}
+
+.texto-formulario h2 {
+    font-size: 24px; /* Tamaño del texto */
+    text-align: center; /* Centrado */
+}
+
+.texto-formulario p {
+    font-size: 16px; /* Tamaño del texto */
+    text-align: center; /* Centrado */
+}
+
+/* Estilos para las etiquetas de los inputs */
+.input label {
+    display: block; /* Bloque */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    margin: 10px 0; /* Margen */
+}
+
+/* Estilos para los enlaces de contraseña olvidada */
+.password-olvidada a {
+    display: inline-block; /* Bloque en línea */
+    margin-top: 10px; /* Margen superior */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+/* Estilos para los inputs del formulario */
+.input input {
+    width: 100%; /* Ancho completo */
+    padding: 8px 12px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    outline: none; /* Sin borde de enfoque */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+/* Estilos para los botones de login y registro */
+.input button {
+    background-color: var(--azulGris); /* Fondo azul gris */
+    color: var(--blanco); /* Texto blanco */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    border: none; /* Sin borde */
+    margin-top: 20px; /* Margen superior */
+    padding: 8px 12px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* Ancho completo */
+    transition: background-color .3s ease-in-out; /* Transición */
+}
+
+.input button:hover {
+    cursor: pointer; /* Cursor puntero */
+    background-color: var(--azulOscuro); /* Fondo azul oscuro */
+}
+
+/* Estilo para enlaces claros */
+.light-link {
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column; /* Elementos en columna */
+        align-items: center; /* Centrado */
+    }
+
+    .imagen-formulario {
+        margin-bottom: 20px; /* Margen inferior */
+    }
+
+    .formulario {
+        max-width: 100%; /* Ancho completo */
+    }
+
+    .input input {
+        max-width: 100%; /* Ancho completo */
+    }
+}

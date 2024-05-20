@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario CSS</title>
+
+    <!-- Fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="css/styleLogin.css">
+</head>
+
+<body>
+    <!-- Contenedor principal del formulario y la imagen -->
+    <div class="contenedor-formulario contenedor">
+        <!-- Contenedor del cuadro con marco grueso -->
+        <div class="cuadro-con-marco">
+            <!-- Contenedor del cuadro que incluye la imagen y el formulario -->
+            <div class="cuadro">
+                <!-- Contenedor de la imagen del logo -->
+                <div class="imagen-formulario">
+                    <img src="img/logo003.png" alt="Logo">
+                </div>
+
+                <!-- Formulario de inicio de sesión -->
+                <form class="formulario" id="login-form">
+                    <!-- Texto del formulario -->
+                    <div class="texto-formulario">
+                        <h2>Bienvenido</h2>
+                        <p>Inicia sesión con tu cuenta</p>
+                    </div>
+                    <!-- Campo de entrada de usuario -->
+                    <div class="input usuario-input">
+                        <label for="usuario">Usuario</label>
+                        <input placeholder="Ingresa tu usuario" type="text" id="usuario" class="input-usuario">
+                    </div>
+                    <!-- Campo de entrada de contraseña -->
+                    <div class="input contraseña-input">
+                        <label for="contraseña">Contraseña</label>
+                        <input placeholder="Ingresa tu contraseña" type="password" id="contraseña" class="input-contraseña">
+                    </div>
+                    <!-- Enlace para recuperar contraseña olvidada -->
+                    <div class="password-olvidada">
+                        <a href="recoverPass.html">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <!-- Botón de envío del formulario -->
+                    <div class="input login-button-container">
+                        <button type="button" id="login-button" class="button-login">Login</button>
+                    </div>
+                    <!-- Botón de registrarse -->
+                    <div class="input register-button-container">
+                        <button type="button" id="register-button" class="button-register">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Archivo JavaScript -->
+    <script src="js/scriptLogin.js"></script>
+</body>
+
+</html>

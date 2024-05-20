@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Usuario</title>
+
+    <!-- Fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="css/styleRegister.css">
+</head>
+
+<body>
+    <!-- Contenedor principal del formulario y la imagen -->
+    <div class="contenedor-formulario contenedor">
+        <!-- Contenedor del cuadro con marco grueso -->
+        <div class="cuadro-con-marco">
+            <!-- Contenedor del cuadro que incluye la imagen y el formulario -->
+            <div class="cuadro">
+                <!-- Contenedor de la imagen del logo -->
+                <div class="imagen-formulario">
+                    <img src="img/logo003.png" alt="Logo">
+                </div>
+
+                <!-- Formulario de registro -->
+                <form class="formulario" id="signup-form">
+                    <!-- Texto del formulario -->
+                    <div class="texto-formulario">
+                        <h2>Regístrate</h2>
+                        <p>Crea una nueva cuenta</p>
+                    </div>
+                    <!-- Campo de entrada de usuario de acceso -->
+                    <div class="input usuario-input">
+                        <label for="nuevo-usuario">Crea un Usuario</label>
+                        <input placeholder="Crea un usuario para acceder" type="text" id="nuevo-usuario" class="input-usuario" required>
+                    </div>
+                    <!-- Campo de entrada de nombre del usuario -->
+                    <div class="input nombre-input">
+                        <label for="nuevo-nombre">Ingresa tu Nombre</label>
+                        <input placeholder="Ingresa tu nombre" type="text" id="nuevo-nombre" class="input-nombre-usuario" required>
+                    </div>
+                    <!-- Campo de entrada de correo electrónico -->
+                    <div class="input correo-input">
+                        <label for="correo">Correo Electrónico</label>
+                        <input placeholder="Ingresa tu correo electrónico" type="email" id="correo" class="input-correo" required>
+                    </div>
+                    <!-- Campo de entrada de contraseña -->
+                    <div class="input nueva-contraseña-input">
+                        <label for="nueva-contraseña">Contraseña</label>
+                        <input placeholder="Ingresa tu contraseña" type="password" id="nueva-contraseña" class="input-nueva-contraseña" required>
+                    </div>
+                    <!-- Campo de confirmación de contraseña -->
+                    <div class="input confirmar-contraseña-input">
+                        <label for="confirmar-contraseña">Confirmar Contraseña</label>
+                        <input placeholder="Confirma tu contraseña" type="password" id="confirmar-contraseña" class="input-confirmar-contraseña" required>
+                    </div>
+                    <!-- Botón de envío del formulario -->
+                    <div class="input register-button-container">
+                        <button type="button" id="register-user" class="button-register">Registrarse</button>
+                    </div>
+                    <!-- Enlace para volver al inicio de sesión -->
+                    <div class="input login-link-container">
+                        <p>¿Ya tienes una cuenta? <a href="login.html" class="light-link">Inicia sesión</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Archivo JavaScript -->
+    <script src="js/scriptRegister.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+/* Configuración de variables CSS */
+:root {
+    --azul: #134074;
+    --azulOscuro: #0B2545;
+    --azulGris: #8DA9C4;
+    --blanco: #fff;
+    --fuente: 'Quicksand', sans-serif;
+}
+
+/* Configuración del box-sizing */
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+/* Color de fondo especial para la página home */
+body {
+    background-color: #b3b5c9; /* Uva */
+}
+
+/* Estilos para la barra de navegación HOME*/
+.header {
+    background-color: var(--azul); /* Cambiar el color de fondo de la barra de navegación */
+    padding: 10px; /* Añadir espacio alrededor de los elementos del menú */
+    text-align: center; /* Centrar los elementos del menú */
+    position: fixed; /* Fija la barra de navegación en la parte superior */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+}
+
+.menu {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para el contenido principal */
+.welcome-user {
+    text-align: center; /* Centrar el contenido */
+}
+
+.user-info {
+    color: var(--azul); /* Cambiar el color del texto del usuario */
+    font-weight: bold; /* Hacer el texto del usuario en negrita */
+    margin-top: 20px; /* Añadir espacio superior */
+}
+
+.nav-menu ul {
+    list-style-type: none; /* Quitar los puntos de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    display: inline; /* Mostrar los elementos de la lista en línea */
+}
+
+.nav-menu ul li a {
+    color: var(--blanco); /* Cambiar el color del texto de los enlaces */
+    text-decoration: none; /* Quitar la subrayado de los enlaces */
+    padding: 10px 20px; /* Añadir espacio alrededor de los enlaces */
+}
+
+/* Estilos para los enlaces del menú cuando el mouse pasa sobre ellos */
+.nav-menu ul li a:hover {
+    color: #7141c9; /* Cambiar el color del texto al pasar el mouse */
+}
+
+/* Estilos para el nombre del usuario */
+.user-info #user-name {
+    font-size: 16px; /* Tamaño de la fuente */
+    color: var(--blanco); /* Color del texto */
+    font-weight: bold; /* Estilo de fuente en negrita */
+    margin-bottom: 10px; /* Agregar espacio inferior */
+}
+
+/* Estilos para el avatar del usuario */
+.user-info img#user-avatar {
+    width: 50px; /* Ancho del avatar */
+    height: 50px; /* Altura del avatar */
+    border-radius: 50%; /* Forma redondeada del avatar */
+    margin-right: 10px; /* Separación a la derecha del avatar */
+    vertical-align: middle; /* Alineación vertical del avatar */
+    margin-bottom: 20px; /* Agregar espacio inferior */
+}
