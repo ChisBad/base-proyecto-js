@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('nuevo-nombre').textContent = nombreUsuario;
     }
 
-    const pageSize = 16 // Tamaño de la página para la paginación
+    const pageSize = 10 // Tamaño de la página para la paginación
     let currentPage = 1; // Página actual
     let currentData = []; // Datos actuales
 
@@ -94,19 +94,28 @@ async function fetchData(endpoint, isHome = false) {
         const end = start + pageSize; // Índice de fin de los datos a mostrar
         const paginatedData = data.slice(start, end); // Obtener los datos para la página actual
 
-        paginatedData.forEach(item => { // Iterar sobre los datos paginados
+        paginatedData.forEach(item => {
             const wineItem = document.createElement('div');
-            wineItem.className = 'wine-item'; // Clase CSS para el estilo del item de vino
+            wineItem.className = 'wine-item';
             wineItem.innerHTML = `
-                <h3>${item.wine}</h3>
-                <img src="${item.image}" alt="${item.wine}" />
-                <p>Vino: ${item.winery}</p>
-                <p>Clasificación: ${item.rating.average}</p>
-                <p>Reseñas: ${item.rating.reviews}</p>
-                <p>Lugar: ${item.location}</p>
+                <div class="wine-details">
+                    <img src="${item.image}" alt="${item.wine}" />
+                    <h3>${item.wine}</h3>
+                </div>
+                <div class="wine-info">
+                    <div>
+                        <p>Vino: ${item.winery}</p>
+                        <p>Desde: ${item.location}</p>
+                    </div>
+                    <div class="ratings">
+                        <span>Reseñas ${item.rating.reviews}</span>
+                        <span>Clasificación ${item.rating.average}</span>
+                    </div>
+                </div>
             `;
-            elements.dataContainer.appendChild(wineItem); // Añadir el item al contenedor de datos
+            elements.dataContainer.appendChild(wineItem);
         });
+        
 
         displayPagination(data.length, page); // Mostrar la paginación
     }
@@ -132,7 +141,7 @@ async function fetchData(endpoint, isHome = false) {
         }
 
         // Crear botón de inicio
-        const startButton = createPageButton('Inicio', 1);
+        const startButton = createPageButton('◀', 1);
         elements.paginationContainer.appendChild(startButton);
 
         // Crear botones para cada página dentro del rango
@@ -142,7 +151,7 @@ async function fetchData(endpoint, isHome = false) {
         }
 
         // Crear botón de fin
-        const endButton = createPageButton('Fin', totalPages);
+        const endButton = createPageButton('▶', totalPages);
         elements.paginationContainer.appendChild(endButton);
     }
 

@@ -1,61 +1,71 @@
-:root { /* Variables CSS */
-    --azul: #134074;
-    --azulOscuro: #0B2545;
-    --azulGris: #8DA9C4;
-    --blanco: #fff;
-    --fuente: 'Quicksand', sans-serif;
+/* Definición de variables CSS */
+:root {
+    --azul: #134074; /* Color azul principal */
+    --azulOscuro: #0B2545; /* Color azul oscuro */
+    --azulGris: #8DA9C4; /* Color azul grisáceo */
+    --blanco: #fff; /* Color blanco */
+    --fuente: 'Quicksand', sans-serif; /* Fuente de texto */
 }
 
+/* Configuración global del box-sizing */
 html {
-    box-sizing: border-box; /* Configuración del box-sizing */
+    box-sizing: border-box;
 }
 
 *, *::after, *::before {
-    box-sizing: inherit; /* Heredar box-sizing */
+    box-sizing: inherit;
 }
 
+/* Estilos del body */
 body {
-    background-color: #f0f2f5; /* Color de fondo del body */
-    font-family: var(--fuente); /* Fuente de texto del body */
+    background-color: #f0f2f5; /* Color de fondo */
+    font-family: var(--fuente); /* Fuente de texto */
+    display: flex; /* Mostrar como flexbox */
+    flex-direction: column; /* Dirección de la flexbox */
+    min-height: 100vh; /* Altura mínima */
 }
 
+/* Estilos del encabezado */
 .header {
-    background-color: var(--azul); /* Color de fondo del encabezado */
-    padding: 10px; /* Relleno del encabezado */
-    text-align: center; /* Centrar el texto */
-    position: fixed; /* Fijar la posición del encabezado */
+    background-color: var(--azul); /* Color de fondo */
+    padding: 10px; /* Relleno */
+    text-align: center; /* Alineación del texto */
+    position: fixed; /* Fijar posición */
     width: 100%; /* Ancho completo */
-    top: 0; /* Posicionar en la parte superior */
-    z-index: 1000; /* Elevar el encabezado por encima de otros elementos */
+    top: 0; /* Arriba */
+    z-index: 1000; /* Índice z */
 }
 
+/* Estilos del menú */
 .menu {
     color: var(--blanco); /* Color del texto */
     font-size: 24px; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
+    font-weight: bold; /* Peso de la fuente */
 }
 
+/* Información del usuario */
 .user-info {
     color: var(--azul); /* Color del texto */
-    font-weight: bold; /* Negrita */
+    font-weight: bold; /* Peso de la fuente */
     margin-top: 10px; /* Margen superior */
-    text-align: center; /* Centrar el texto */
+    text-align: center; /* Alineación del texto */
 }
 
+/* Estilos del menú de navegación */
 .nav-menu ul {
-    list-style-type: none; /* Eliminar los puntos de la lista */
+    list-style-type: none; /* Tipo de lista */
     margin: 0; /* Margen */
     padding: 0; /* Relleno */
-    text-align: center; /* Centrar el texto */
+    text-align: center; /* Alineación del texto */
 }
 
 .nav-menu ul li {
-    display: inline; /* Mostrar elementos en línea */
+    display: inline; /* Mostrar en línea */
 }
 
 .nav-menu ul li a {
     color: var(--blanco); /* Color del texto */
-    text-decoration: none; /* Eliminar subrayado */
+    text-decoration: none; /* Decoración del texto */
     padding: 8px 16px; /* Relleno */
 }
 
@@ -64,57 +74,109 @@ body {
 }
 
 .nav-menu ul li a.active {
-    font-weight: bold; /* Hace el texto en negrita para resaltarlo */
-    color: #4A90E2; /* Cambia el color del texto */
+    font-weight: bold; /* Peso de la fuente */
+    color: #4A90E2; /* Color */
 }
 
+/* Información del usuario - Nombre */
 #user-name {
     font-size: 14px; /* Tamaño de la fuente */
     color: var(--blanco); /* Color del texto */
-    font-weight: bold; /* Negrita */
+    font-weight: bold; /* Peso de la fuente */
     margin-bottom: 5px; /* Margen inferior */
 }
 
+/* Avatar del usuario */
 #user-avatar {
-    height: 60px; /* Aumenta la altura del avatar */
-    margin-right: 10px; /* Agrega un poco de separación al lado derecho */
-    margin-bottom: 5px; /* Agrega un poco de separación en la parte inferior */
+    height: 60px; /* Altura */
+    margin-right: 10px; /* Margen derecho */
+    margin-bottom: 5px; /* Margen inferior */
 }
 
+/* Contenedor de datos */
 #data-container {
-    display: grid; /* Mostrar como una cuadrícula */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar columnas automáticamente */
+    display: grid; /* Mostrar como cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas automáticas */
     gap: 10px; /* Espacio entre elementos */
     padding: 20px; /* Relleno */
     margin-top: 160px; /* Margen superior */
-    justify-content: center;
+    justify-content: center; /* Alineación del contenido */
 }
 
-/* Estilo específico para cuando está en la página de inicio */
+/* Estilos específicos para la página de inicio */
 .home #data-container {
-    margin-top: 0; /* Eliminar el margen para la página de inicio */
+    margin-top: 0; /* Eliminar margen superior */
 }
 
+/* Elementos de cada vino */
 .wine-item {
     background-color: var(--blanco); /* Color de fondo */
     border: 1px solid var(--azulGris); /* Borde */
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px; /* Borde redondeado */
     padding: 10px; /* Relleno */
-    text-align: center; /* Centrar el texto */
+    display: flex; /* Mostrar como flexbox */
+    flex-direction: column; /* Dirección de la flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+    position: relative; /* Posición relativa */
+    text-align: center; /* Centrar el contenido del contenedor */
 }
 
+/* Estilo específico para el último div */
+.wine-item .wine-info div:last-child {
+    margin-top: auto; /* Margen superior automático */
+}
+
+/* Información del vino */
+.wine-item .wine-info {
+    flex: 1; /* Flexible */
+    display: flex; /* Mostrar como flexbox */
+    flex-direction: column; /* Dirección de la flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+}
+
+/* Estilos de las calificaciones */
+.wine-item .ratings {
+    display: flex; /* Mostrar como flexbox */
+    justify-content: space-between; /* Justificar contenido */
+    padding: 10px 20px; /* Relleno */
+}
+
+/* Estilos para cada etiqueta dentro de las calificaciones */
+.wine-item .ratings span {
+    flex-grow: 1; /* Permite que las etiquetas ocupen el espacio disponible */
+    text-align: center; /* Alinea el texto a la izquierda */
+}
+
+/* Estilos específicos para la clasificación */
+.wine-item .ratings .rating-average {
+    text-align: right; /* Alinea la clasificación a la derecha */
+}
+
+/* Imagen del vino */
 .wine-item img {
-    width: 80px; /* Ancho de la imagen */
-    height: auto; /* Alto automático */
-    margin: 10px 0; /* Margen superior e inferior */
+    max-height: 150px; /* Altura máxima */
+    border-radius: 8px; /* Borde redondeado */
+    display: block; /* Convertir la imagen en un bloque para centrarla */
+    margin: 10px auto; /* Margen superior e inferior */
 }
 
+/* Pie de página */
+#footer {
+    margin-top: auto; /* Empuja el pie de página al final */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Alineación del texto */
+    padding: 20px 0; /* Relleno */
+    background-color: #f1f1f1; /* Color de fondo */
+}
+
+/* Paginación */
 .pagination {
-    display: flex; /* Mostrar elementos en línea */
-    justify-content: center; /* Centrar elementos */
+    display: flex; /* Mostrar como flexbox */
+    justify-content: center; /* Justificar contenido */
     margin: 10px 0; /* Margen */
 }
 
+/* Botones de paginación */
 .page-button {
     background-color: var(--azulGris); /* Color de fondo */
     border: none; /* Sin borde */
@@ -122,23 +184,25 @@ body {
     padding: 5px 8px; /* Relleno */
     margin: 0 2px; /* Margen */
     cursor: pointer; /* Cursor de puntero */
-    border-radius: 4px; /* Bordes redondeados */
+    border-radius: 4px; /* Borde redondeado */
     font-size: 12px; /* Tamaño de la fuente */
 }
 
+/* Estilo activo para botones de página */
 .page-button.active {
-    background-color: var(--azul); /* Color de fondo activo */
+    background-color: var(--azul); /* Color de fondo */
 }
 
+/* Estilo hover para botones de página */
 .page-button:hover {
     background-color: var(--azulOscuro); /* Color de fondo al pasar el mouse */
 }
 
-/* Estilo para el título del catálogo */
+/* Título del catálogo */
 .catalog-title {
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 170px 0 20px; 
-    color: var(--azulOscuro);
+    font-size: 3rem; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    text-align: center; /* Alineación del texto */
+    margin: 170px 0 20px; /* Margen */
+    color: var(--azulOscuro); /* Color del texto */
 }
