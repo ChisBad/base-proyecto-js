@@ -1,40 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres utilizado por el documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para una correcta visualización en dispositivos móviles -->
+    <title>Home</title> <!-- Título de la página -->
     <link rel="stylesheet" href="src/styles/styleHome.css"> <!-- Enlace al archivo de estilos CSS -->
 </head>
-
 <body>
 
     <header class="header">
-        <!-- Contenido de Bienvenida y Usuario -->
-        <div class="welcome-user">
-            <div class="menu">Bienvenido</div> <!-- Contenido de Bienvenida -->
-            <div id="user-info" class="user-info">
-                <p id="user-name">Usuario: <span id="nuevo-nombre"></span></p> <!-- Nombre del Usuario -->
-                <img src="#" id="user-avatar" alt="Avatar"> <!-- Avatar del Usuario -->
-            </div>
+        <div class="menu">Bienvenido</div> <!-- Texto de bienvenida -->
+        <div id="user-info" class="user-info">
+            <p id="user-name">Usuario: <span id="nuevo-nombre"></span></p> <!-- Nombre del Usuario -->
+            <img src="https://media.licdn.com/dms/image/C4D22AQFFf_jtgAy73w/feedshare-shrink_2048_1536/0/1675853042082?e=2147483647&v=beta&t=9EEjkd5ZGFlWZ-9H6-XE05SeTl-An6niKHPL2ppeVQA" id="user-avatar" alt="Avatar"> <!-- Avatar del Usuario -->
         </div>
-
-        <!-- Barra de navegación -->
         <nav class="nav-menu">
             <ul>
-                <li><a href="#">Home</a></li> <!-- Enlace a la página Home -->
-                <li><a href="#">Productos</a></li> <!-- Enlace a la página de Productos -->
-                <li><a href="#">Posts</a></li> <!-- Enlace a la página de Posts -->
-                <li><a href="#">Usuarios</a></li> <!-- Enlace a la página de Usuarios -->
-                <li><a href="#">Recetas</a></li> <!-- Enlace a la página de Recetas -->
+                <li><a href="#" id="home">Inicio</a></li> <!-- Enlace al inicio -->
+                <li><a href="#" id="reds">Vino Tinto</a></li> <!-- Enlace a vinos rojos -->
+                <li><a href="#" id="whites">Vino Blanco</a></li> <!-- Enlace a vinos blancos -->
+                <li><a href="#" id="sparkling">Vino Espumoso</a></li> <!-- Enlace a vinos espumosos -->
+                <li><a href="#" id="rose">Vino Rosado</a></li> <!-- Enlace a vinos rosados -->
+                <li><a href="#" id="dessert">Vinos Postre</a></li> <!-- Enlace a vinos de postre -->
+                <li><a href="#" id="port">Vino Oporto</a></li> <!-- Enlace a vinos de oporto -->
                 <li><a href="#" id="cerrar-sesion">Cerrar Sesión</a></li> <!-- Enlace para cerrar sesión -->
             </ul>
         </nav>
     </header>
 
-    <!-- Archivo JavaScript -->
-    <script src="src/scripts/scriptHome.js"></script>
-</body>
+    <div id="catalog-title" class="catalog-title">Catálogo de los mejores Vinos</div> <!-- Título del catálogo -->
+    <div id="data-container"></div> <!-- Contenedor para los datos -->
+    <div id="pagination-container" class="pagination"></div> <!-- Contenedor para la paginación -->
 
+    <script src="src/scripts/scriptHome.js"></script> <!-- Archivo JavaScript -->
+</body>
 </html>

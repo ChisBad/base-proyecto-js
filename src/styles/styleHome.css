@@ -1,5 +1,4 @@
-/* Configuración de variables CSS */
-:root {
+:root { /* Variables CSS */
     --azul: #134074;
     --azulOscuro: #0B2545;
     --azulGris: #8DA9C4;
@@ -7,83 +6,139 @@
     --fuente: 'Quicksand', sans-serif;
 }
 
-/* Configuración del box-sizing */
 html {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Configuración del box-sizing */
 }
 
 *, *::after, *::before {
-    box-sizing: inherit;
+    box-sizing: inherit; /* Heredar box-sizing */
 }
 
-/* Color de fondo especial para la página home */
 body {
-    background-color: #f0f2f5; /* Uva */
+    background-color: #f0f2f5; /* Color de fondo del body */
+    font-family: var(--fuente); /* Fuente de texto del body */
 }
 
-/* Estilos para la barra de navegación HOME*/
 .header {
-    background-color: var(--azul); /* Cambiar el color de fondo de la barra de navegación */
-    padding: 10px; /* Añadir espacio alrededor de los elementos del menú */
-    text-align: center; /* Centrar los elementos del menú */
-    position: fixed; /* Fija la barra de navegación en la parte superior */
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+    background-color: var(--azul); /* Color de fondo del encabezado */
+    padding: 10px; /* Relleno del encabezado */
+    text-align: center; /* Centrar el texto */
+    position: fixed; /* Fijar la posición del encabezado */
+    width: 100%; /* Ancho completo */
+    top: 0; /* Posicionar en la parte superior */
+    z-index: 1000; /* Elevar el encabezado por encima de otros elementos */
 }
 
 .menu {
-    color: var(--blanco);
-    font-size: 28px; /* Tamaño de fuente más grande */
-    font-weight: bold; /* Texto en negrita */
-}
-
-/* Estilos para el contenido principal */
-.welcome-user {
-    text-align: center; /* Centrar el contenido */
+    color: var(--blanco); /* Color del texto */
+    font-size: 24px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
 }
 
 .user-info {
-    color: var(--azul); /* Cambiar el color del texto del usuario */
-    font-weight: bold; /* Hacer el texto del usuario en negrita */
-    margin-top: 20px; /* Añadir espacio superior */
+    color: var(--azul); /* Color del texto */
+    font-weight: bold; /* Negrita */
+    margin-top: 10px; /* Margen superior */
+    text-align: center; /* Centrar el texto */
 }
 
 .nav-menu ul {
-    list-style-type: none; /* Quitar los puntos de la lista */
-    margin: 0;
-    padding: 0;
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    margin: 0; /* Margen */
+    padding: 0; /* Relleno */
+    text-align: center; /* Centrar el texto */
 }
 
 .nav-menu ul li {
-    display: inline; /* Mostrar los elementos de la lista en línea */
+    display: inline; /* Mostrar elementos en línea */
 }
 
 .nav-menu ul li a {
-    color: var(--blanco); /* Cambiar el color del texto de los enlaces */
-    text-decoration: none; /* Quitar la subrayado de los enlaces */
-    padding: 10px 20px; /* Añadir espacio alrededor de los enlaces */
-}
-
-/* Estilos para los enlaces del menú cuando el mouse pasa sobre ellos */
-.nav-menu ul li a:hover {
-    color: #7141c9; /* Cambiar el color del texto al pasar el mouse */
-}
-
-/* Estilos para el nombre del usuario */
-.user-info #user-name {
-    font-size: 16px; /* Tamaño de la fuente */
     color: var(--blanco); /* Color del texto */
-    font-weight: bold; /* Estilo de fuente en negrita */
-    margin-bottom: 10px; /* Agregar espacio inferior */
+    text-decoration: none; /* Eliminar subrayado */
+    padding: 8px 16px; /* Relleno */
 }
 
-/* Estilos para el avatar del usuario */
-.user-info img#user-avatar {
-    width: 50px; /* Ancho del avatar */
-    height: 50px; /* Altura del avatar */
-    border-radius: 50%; /* Forma redondeada del avatar */
-    margin-right: 10px; /* Separación a la derecha del avatar */
-    vertical-align: middle; /* Alineación vertical del avatar */
-    margin-bottom: 20px; /* Agregar espacio inferior */
+.nav-menu ul li a:hover {
+    color: #7141c9; /* Color al pasar el mouse */
+}
+
+.nav-menu ul li a.active {
+    font-weight: bold; /* Hace el texto en negrita para resaltarlo */
+    color: #4A90E2; /* Cambia el color del texto */
+}
+
+#user-name {
+    font-size: 14px; /* Tamaño de la fuente */
+    color: var(--blanco); /* Color del texto */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+#user-avatar {
+    height: 60px; /* Aumenta la altura del avatar */
+    margin-right: 10px; /* Agrega un poco de separación al lado derecho */
+    margin-bottom: 5px; /* Agrega un poco de separación en la parte inferior */
+}
+
+#data-container {
+    display: grid; /* Mostrar como una cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar columnas automáticamente */
+    gap: 10px; /* Espacio entre elementos */
+    padding: 20px; /* Relleno */
+    margin-top: 160px; /* Margen superior */
+    justify-content: center;
+}
+
+/* Estilo específico para cuando está en la página de inicio */
+.home #data-container {
+    margin-top: 0; /* Eliminar el margen para la página de inicio */
+}
+
+.wine-item {
+    background-color: var(--blanco); /* Color de fondo */
+    border: 1px solid var(--azulGris); /* Borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Relleno */
+    text-align: center; /* Centrar el texto */
+}
+
+.wine-item img {
+    width: 80px; /* Ancho de la imagen */
+    height: auto; /* Alto automático */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+.pagination {
+    display: flex; /* Mostrar elementos en línea */
+    justify-content: center; /* Centrar elementos */
+    margin: 10px 0; /* Margen */
+}
+
+.page-button {
+    background-color: var(--azulGris); /* Color de fondo */
+    border: none; /* Sin borde */
+    color: var(--blanco); /* Color del texto */
+    padding: 5px 8px; /* Relleno */
+    margin: 0 2px; /* Margen */
+    cursor: pointer; /* Cursor de puntero */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 12px; /* Tamaño de la fuente */
+}
+
+.page-button.active {
+    background-color: var(--azul); /* Color de fondo activo */
+}
+
+.page-button:hover {
+    background-color: var(--azulOscuro); /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para el título del catálogo */
+.catalog-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 170px 0 20px; 
+    color: var(--azulOscuro);
 }
