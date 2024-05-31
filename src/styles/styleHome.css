@@ -30,7 +30,6 @@ body {
     background-color: var(--azul); /* Color de fondo */
     padding: 10px; /* Relleno */
     text-align: center; /* Alineación del texto */
-    position: fixed; /* Fijar posición */
     width: 100%; /* Ancho completo */
     top: 0; /* Arriba */
     z-index: 1000; /* Índice z */
@@ -96,16 +95,22 @@ body {
 /* Contenedor de datos */
 #data-container {
     display: grid; /* Mostrar como cuadrícula */
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas automáticas */
-    gap: 10px; /* Espacio entre elementos */
+    grid-template-columns: repeat(5, 1fr); /* Crear 5 columnas por fila */
+    gap: 20px; /* Espacio entre elementos */
     padding: 20px; /* Relleno */
-    margin-top: 160px; /* Margen superior */
-    justify-content: center; /* Alineación del contenido */
+    justify-content: center; /* Centrar el contenido */
 }
 
 /* Estilos específicos para la página de inicio */
 .home #data-container {
     margin-top: 0; /* Eliminar margen superior */
+}
+
+/* Ajustar el diseño para pantallas pequeñas */
+@media (max-width: 1200px) {
+    #data-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste automático de columnas */
+    }
 }
 
 /* Elementos de cada vino */
@@ -117,7 +122,6 @@ body {
     display: flex; /* Mostrar como flexbox */
     flex-direction: column; /* Dirección de la flexbox */
     justify-content: space-between; /* Espacio entre elementos */
-    position: relative; /* Posición relativa */
     text-align: center; /* Centrar el contenido del contenedor */
 }
 
@@ -143,8 +147,8 @@ body {
 
 /* Estilos para cada etiqueta dentro de las calificaciones */
 .wine-item .ratings span {
-    flex-grow: 1; /* Permite que las etiquetas ocupen el espacio disponible */
-    text-align: center; /* Alinea el texto a la izquierda */
+    text-align: center; /* Alinea el texto en el centro */
+    margin: 0 10px; /* Añadir margen entre los elementos */
 }
 
 /* Estilos específicos para la clasificación */
@@ -158,6 +162,7 @@ body {
     border-radius: 8px; /* Borde redondeado */
     display: block; /* Convertir la imagen en un bloque para centrarla */
     margin: 10px auto; /* Margen superior e inferior */
+    object-fit: contain; /* Ajustar la imagen dentro del contenedor */
 }
 
 /* Pie de página */
@@ -203,6 +208,6 @@ body {
     font-size: 3rem; /* Tamaño de la fuente */
     font-weight: bold; /* Peso de la fuente */
     text-align: center; /* Alineación del texto */
-    margin: 170px 0 20px; /* Margen */
+    margin: 20px 0 5px; /* Margen */
     color: var(--azulOscuro); /* Color del texto */
 }

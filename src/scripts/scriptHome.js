@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('nuevo-nombre').textContent = nombreUsuario;
     }
 
-    const pageSize = 10 // Tamaño de la página para la paginación
+    const pageSize = 15; // 15 elementos por página (3 filas de 5 elementos)
     let currentPage = 1; // Página actual
     let currentData = []; // Datos actuales
 

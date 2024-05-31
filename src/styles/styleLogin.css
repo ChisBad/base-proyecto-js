@@ -1,10 +1,10 @@
 /* Configuración de variables CSS */
 :root {
-    --azul: #134074;
-    --azulOscuro: #0B2545;
-    --azulGris: #8DA9C4;
-    --blanco: #fff;
-    --fuente: 'Quicksand', sans-serif;
+    --azul: #134074; /* Color azul principal */
+    --azulOscuro: #0B2545; /* Color azul oscuro */
+    --azulGris: #8DA9C4; /* Color azul grisáceo */
+    --blanco: #fff; /* Color blanco */
+    --fuente: 'Quicksand', sans-serif; /* Fuente de texto */
 }
 
 /* Configuración del box-sizing */
@@ -18,18 +18,18 @@ html {
 
 /* Estilos para el cuerpo del documento */
 body {
-    font-family: var(--fuente);
-    background-color: #f0f2f5; /* Color de fondo blanco */
-    display: flex;
+    font-family: var(--fuente); /* Fuente de texto */
+    background-color: #f0f2f5; /* Color de fondo */
+    display: flex; /* Flexbox para centrar contenido */
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */
-    height: 100vh;
+    height: 100vh; /* Altura completa de la ventana */
     margin: 0; /* Sin margen */
 }
 
 /* Estilos para el contenedor principal */
 .contenedor {
-    display: flex;
+    display: flex; /* Flexbox */
     justify-content: center; /* Centrado horizontal */
     align-items: center; /* Centrado vertical */
     flex-direction: row; /* Elementos en fila */
@@ -40,7 +40,7 @@ body {
 .cuadro {
     border: 5px solid var(--azul); /* Borde grueso azul */
     padding: 20px; /* Espacio interno */
-    display: flex;
+    display: flex; /* Flexbox */
     flex-direction: row; /* Elementos en fila */
     justify-content: space-between; /* Espacio entre elementos */
     align-items: center; /* Centrado vertical */
